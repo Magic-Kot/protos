@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package notification;
+
+option go_package = "store.sso.v1;ssov1";
+
+service Notification {
+  rpc TelegramNotification (MessageRequest) returns (StatusResponse);
+}
+
+message MessageRequest {
+  string message = 1;
+}
+
+message StatusResponse {
+  string status = 1;
+}
