@@ -9,9 +9,11 @@ service Notification {
 }
 
 message MessageRequest {
-  string message = 1;
+  string email = 1;   // The user's email address to send him an email.
+  string subject = 2; // Email subject.
+  string body = 3;    // Email body.
 }
 
 message StatusResponse {
-  string status = 1;
+  string status = 1; // Indicates whether a message has been sent.
 }
